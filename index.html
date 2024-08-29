@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Jeux Serpent</title>
+</head>
+<body class="bg-dark text-light">
+
+    <div class="container p-3 text-center">
+        <div class="accueil d-flex align-items-center justify-content-center flex-column ">
+            <h1 class="display-2 w-75 text-success bg-light rounded shadow-lg py-2">BIENVENUE !</h1>
+
+            <div class="image-button my-5">
+                <div class="image pb-2 pt-2 px-2 rounded my-3 bg-light">
+                    <img class="img-fluid h-100" src="img/serpent.jpg" alt="Image-serpent">
+                </div>
+
+              <button popovertarget="my-popover" class="btn btn-success p-3 fs-3 mt-3">Jouer</button>
+                <div class="popover-width">
+                    <div id="my-popover" popover class="w-100 ">
+                        <div class="score bg-success-subtle text-bg-light rounded shadow p-3 mb-2 d-flex align-items-start justify-content-around">
+                           <div class="label d-flex align-items-center ">
+                          <h4> Score :</h4> <span class="h4 score-actuelle">00</span>
+        
+                           </div>
+    
+                          <div class="levels w-25">
+                            <select class="form-select w-100" aria-label="Default select example">
+                                <option selected>Nivaux</option>
+                                <option value="1">Facile</option>
+                                <option value="2">Normale</option>
+                                <option value="3">Dificile</option>
+                              </select>
+                          </div>
+    
+                          <div class="meilleurScore">
+                            <div class="label  d-flex align-items-center ">
+                               <h4>Meilleur Score :</h4> <span class="h4 score-finale">00</span> 
+                            </div>
+                          </div>
+    
+                        </div>
+    
+                        <canvas id="table" class="shadow w-100 bg-success rounded"></canvas>
+                        <div class="arrow w-50 mx-auto p-3 ">
+    
+                          <div class="row">
+                                <button class="arrows col up btn btn-outline-success">
+                                    HAUT <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+                                    </svg>
+                                </button>
+    
+                                <button class="arrows col down  btn btn-outline-success">
+                                   BAS <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+                                    </svg>
+                                </button>
+                          </div>
+    
+                           <div class="row">
+                            <button class="arrows col left  btn btn-outline-success">
+                               GAUCHE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                                </svg>
+                            </button>
+    
+                            <button class="arrows col right  btn btn-outline-success">
+                               DROITE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </button>
+                           </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
